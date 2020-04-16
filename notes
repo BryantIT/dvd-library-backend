@@ -1,0 +1,31 @@
+User Story:
+  Users should be able to:
+    Add a DVD or Book to their personal library
+    Access their personal library
+    Edit information about a DVD or Book
+    Delete a DVD or Book
+    See if a DVD or Book is a hard copy or digital or both
+    Search DVDs and Books
+    Share their list with others?
+
+
+Users
+  Name
+  Email
+  Password
+  has_many :dvds
+  has_many :books
+
+DVD
+  Title
+  Year Released (handled by external API?)
+  Description (handled by external API?)
+  Image (handled by external API?)
+  belongs_to :user
+
+Book
+  Title (handled by external API?)
+  Author (handled by external API?)
+  Description (handled by external API?)
+  Image (handled by external API?)
+  belongs_to :user
