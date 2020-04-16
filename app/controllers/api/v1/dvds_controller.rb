@@ -1,4 +1,4 @@
-class DvdsController < ApplicationController
+class Api::V1::DvdsController < ApplicationController
   before_action :set_book, only: [:show, :update, :destroy]
 
   def index

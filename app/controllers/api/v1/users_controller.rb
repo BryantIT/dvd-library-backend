@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   def index
@@ -23,6 +23,7 @@ class UsersController < ApplicationController
         error: @user.errors.full_messages.to_sentence
       }
       render json: resp, status: :unprocessable_entity
+    end
   end
 
   def update
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
       render json: @user
     else
       render json @user.errors, status: :unprocessable_entity
+    end
   end
 
   def destroy
