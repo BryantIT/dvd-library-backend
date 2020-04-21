@@ -1,5 +1,5 @@
 class Api::V1::MoviesController < ApplicationController
-  before_action :set_book, only: [:show, :update, :destroy]
+  before_action :set_movie, only: [:show, :update, :destroy]
 
   def index
     if logged_in?
